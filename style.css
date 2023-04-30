@@ -201,13 +201,32 @@ header .menu .menu-items {
 .menu-item {
   list-style-type: none;
   margin: 15px;
+  font-weight: 700;
 }
 .menu-item a {
   color: #FFFFFF;
   text-decoration: none;
+  position: relative;
 }
 .menu-item a:hover {
   color: #F0145A;
+}
+.menu-item a::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #F0145A;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+  transform: scaleX(0);
+}
+
+.menu-item a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .burger-menu {
@@ -454,7 +473,6 @@ header .menu .menu-items {
 .services {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-left: 30px;
 }
 @media (min-width: 1024px) {
@@ -469,12 +487,14 @@ header .menu .menu-items {
   flex-wrap: wrap;
   gap: 60px;
   padding-top: 30px;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .cards__block {
     flex-direction: row;
     padding-top: 60px;
     justify-content: center;
+    align-items: unset;
   }
 }
 
@@ -482,6 +502,17 @@ header .menu .menu-items {
   font-size: 14px;
   display: flex;
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  .link-and-text__block {
+    padding-left: 60px;
+  }
+}
+@media (min-width: 1920px) {
+  .link-and-text__block {
+    padding-left: 160px;
+  }
 }
 
 .link__title {
@@ -509,7 +540,6 @@ header .menu .menu-items {
 
 .text__block {
   display: flex;
-  justify-content: center;
   font-weight: 700;
   font-size: 30px;
   background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
@@ -640,7 +670,7 @@ header .menu .menu-items {
 }
 @media (min-width: 1440px) {
   .photo__and--text .text__block {
-    font-size: 37px;
+    font-size: 36px;
     word-break: break-all;
   }
 }
@@ -651,6 +681,7 @@ header .menu .menu-items {
 
 .photo__and--text .link-and-text__block {
   padding-top: 30px;
+  padding-left: 0;
 }
 @media (min-width: 1024px) {
   .photo__and--text .link-and-text__block {
@@ -891,7 +922,6 @@ header .menu .menu-items {
 .publications {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-left: 30px;
   gap: 30px;
   padding-bottom: 30px;
@@ -906,12 +936,14 @@ header .menu .menu-items {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .publications__block {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: unset;
   }
 }
 
