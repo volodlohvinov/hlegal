@@ -3,6 +3,11 @@
   font-family: "Montserrat";
   src: url(fonts/Montserrat-Regular.woff) format(woff);
 }
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/Montserrat-Bold.woff) format(woff);
+ font-weight: 700;
+}
 * {
   &,
   &:before,
@@ -354,6 +359,7 @@ header {
 .card__title {
   color: $links-color;
   font-size: 26px;
+  font-weight: 700;
   a {
     color: $links-color;
     text-decoration: none;

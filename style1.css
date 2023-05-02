@@ -2,6 +2,11 @@
   font-family: "Montserrat";
   src: url(fonts/Montserrat-Regular.woff) format(woff);
 }
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/Montserrat-Bold.woff) format(woff);
+  font-weight: 700;
+}
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -356,6 +361,7 @@ header .menu .menu-items {
 .card__title {
   color: #24A3FF;
   font-size: 26px;
+  font-weight: 700;
 }
 .card__title a {
   color: #24A3FF;
